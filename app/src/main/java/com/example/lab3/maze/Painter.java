@@ -4,13 +4,13 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 
-import com.example.lab3.maze.model.Cell;
-import com.example.lab3.maze.model.Direction;
+import com.example.lab3.maze.objects.Cell;
+import com.example.lab3.maze.objects.Direction;
 
 /**
  * Class to paint cells, walls, player and exit.
  */
-public class MazePainter {
+public class Painter {
     private Canvas canvas;
     private final int rows, cols;
     private final float thickness = 4;
@@ -19,13 +19,13 @@ public class MazePainter {
     private int verticalMargin;
     int backgroundColor = Color.parseColor("#FAFAFA");
 
-    MazeManager manager;
+    Manager manager;
 
-    public MazePainter(int cols, int rows){
+    public Painter(int cols, int rows){
         this.cols = cols;
         this.rows = rows;
 
-        manager = new MazeManager(cols, rows);
+        manager = new Manager(cols, rows);
         manager.generateMaze();
     }
 

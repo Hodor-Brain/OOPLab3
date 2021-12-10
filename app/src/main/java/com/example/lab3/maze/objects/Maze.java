@@ -1,6 +1,4 @@
-package com.example.lab3.maze;
-
-import com.example.lab3.maze.model.Cell;
+package com.example.lab3.maze.objects;
 
 import java.util.ArrayList;
 import java.util.List;

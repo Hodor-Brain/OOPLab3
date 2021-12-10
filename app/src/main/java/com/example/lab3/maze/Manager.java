@@ -1,8 +1,8 @@
 package com.example.lab3.maze;
 
-import com.example.lab3.maze.model.Cell;
+import com.example.lab3.maze.objects.Cell;
+import com.example.lab3.maze.objects.Maze;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 /**
  * Class for managing and generating maze..
  */
-public class MazeManager {
+public class Manager {
 
     private final Maze maze;
     private Cell playerCell;
@@ -21,15 +21,15 @@ public class MazeManager {
 
     private static Random random = new Random();
 
-    public MazeManager(int columns, int rows) {
+    public Manager(int columns, int rows) {
         maze = new Maze(columns, rows);
         random = new Random();
 
         int[][] array = new int[][]{{0, 0}, {columns - 1, 0}, {columns - 1, rows - 1}, {0, rows - 1}};
         ArrayList<int[]> list = new ArrayList<>(Arrays.asList(array));
 
-        int playerPos[] = list.remove(new Random().nextInt(array.length));
-        int exitPos[] = list.remove(new Random().nextInt(array.length));
+        int playerPos[] = list.remove(new Random().nextInt(list.size()));
+        int exitPos[] = list.remove(new Random().nextInt(list.size()));
 
         playerCell = maze.getCell(playerPos[0], playerPos[1]);
         exitCell = maze.getCell(exitPos[0], exitPos[1]);

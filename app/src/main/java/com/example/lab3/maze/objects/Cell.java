@@ -1,4 +1,4 @@
-package com.example.lab3.maze.model;
+package com.example.lab3.maze.objects;
 
 /**
  * Class representing cell.

@@ -18,7 +18,7 @@ import android.widget.PopupWindow;
 
 import androidx.annotation.Nullable;
 
-import com.example.lab3.maze.MazePainter;
+import com.example.lab3.maze.Painter;
 
 /**
  * Class to generate new maze and paint walls, cells, player and exit.
@@ -29,7 +29,7 @@ public class GameView extends View {
      * Paints for different objects.
      */
     private Paint wallPaint, playerPaint, exitPaint;
-    MazePainter maze;
+    Painter maze;
     Button button;
     PopupWindow popupWindow;
     Canvas canvas;
@@ -40,7 +40,7 @@ public class GameView extends View {
     }
 
     private void createView(){
-        maze = new MazePainter(8, 12);
+        maze = new Painter(8, 12);
 
         wallPaint = new Paint();
         wallPaint.setColor(Color.DKGRAY);

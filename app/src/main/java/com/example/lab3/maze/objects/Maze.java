@@ -63,4 +63,12 @@ public class Maze {
     public Cell getCell(int col, int row){
         return cells[col][row];
     }
+
+    public int getCols(){
+        return cols;
+    }
+
+    public int getRows(){
+        return rows;
+    }
 }

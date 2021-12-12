@@ -23,18 +23,18 @@ import com.example.lab3.maze.Painter;
 /**
  * Class to generate new maze and paint walls, cells, player and exit.
  */
-public class GameView extends View {
+public class MainView extends View {
     private static final float WALL_THICKNESS = 10;
     /**
      * Paints for different objects.
      */
     private Paint wallPaint, playerPaint, exitPaint;
-    Painter maze;
-    Button button;
-    PopupWindow popupWindow;
-    Canvas canvas;
+    private Painter maze;
+    private Button button;
+    private PopupWindow popupWindow;
+    private Canvas canvas;
 
-    public GameView(Context context, @Nullable AttributeSet attrs) {
+    public MainView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         createView();
     }
